@@ -1,20 +1,32 @@
 package routers
 
 import (
-	"github.com/genshen/ssh-web-console/src/controllers"
-	"github.com/genshen/ssh-web-console/src/controllers/files"
-	"github.com/genshen/ssh-web-console/src/utils"
-	_ "github.com/genshen/ssh-web-console/statik"
-	"github.com/rakyll/statik/fs"
+	"embed"
+	"io/fs"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/genshen/ssh-web-console/src/controllers"
+	"github.com/genshen/ssh-web-console/src/controllers/files"
+	"github.com/genshen/ssh-web-console/src/utils"
 )
 
 const (
 	RunModeDev  = "dev"
 	RunModeProd = "prod"
 )
+
+//go:embed build
+var statikFS embed.FS
+
+func getFileSystem() http.FileSystem {
+	fsys, err := fs.Sub(statikFS, "build")
+	if err != nil {
+		return nil
+	}
+	return http.FS(fsys)
+}
 
 func Register() {
 	// serve static files
@@ -42,11 +54,7 @@ func Register() {
 			utils.ServeHTTP(w, r) // server soft static files.
 		})
 	} else {
-		statikFS, err := fs.New()
-		if err != nil {
-			log.Fatal(err)
-		}
-		http.Handle(utils.Config.Prod.StaticPrefix, http.StripPrefix(utils.Config.Prod.StaticPrefix, http.FileServer(statikFS)))
+		http.Handle(utils.Config.Prod.StaticPrefix, http.StripPrefix(utils.Config.Prod.StaticPrefix, http.FileServer(getFileSystem())))
 	}
 
 	bct := utils.Config.SSH.BufferCheckerCycleTime
