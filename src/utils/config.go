@@ -1,9 +1,10 @@
 package utils
 
 import (
-	"gopkg.in/yaml.v3"
 	"io/ioutil"
 	"os"
+
+	"gopkg.in/yaml.v3"
 )
 
 var Config struct {
@@ -18,7 +19,7 @@ var Config struct {
 	} `yaml:"prod"`
 	Dev struct {
 		StaticPrefix string `yaml:"static_prefix"` // https prefix of only static files
-		//StaticPrefix string `yaml:"static_prefix"` // prefix of static files in dev mode.
+		//ssh/staticPrefix string `yaml:"static_prefix"` // prefix of static files in dev mode.
 		// redirect static files requests to this address, redirect "StaticPrefix" to "StaticRedirect + StaticPrefix"
 		// for example, StaticPrefix is "static", StaticRedirect is "localhost:8080/dist",
 		// this will redirect all requests having prefix "static" to "localhost:8080/dist/"

@@ -19,7 +19,7 @@ import (
 )
 
 // serve all views files from memory storage.
-// basic idea: https://github.com/bouk/staticfiles
+// basic idea: https://github.com/bouk/ssh/staticfiles
 type staticFilesFile struct {
 	data  []byte
 	mime  string
