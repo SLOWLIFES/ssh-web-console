@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/genshen/ssh-web-console/src/controllers"
-	"github.com/genshen/ssh-web-console/src/controllers/files"
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/controllers"
+	"github.com/SLOWLIFES/ssh-web-console/src/controllers/files"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 )
 
 const (

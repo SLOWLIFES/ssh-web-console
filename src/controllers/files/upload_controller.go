@@ -1,7 +1,7 @@
 package files
 
 import (
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 	"github.com/pkg/sftp"
 	"log"
 	"mime/multipart"
@@ -45,7 +45,7 @@ func (f FileUpload) ServeAfterAuthenticated(w http.ResponseWriter, r *http.Reque
 // upload file to server via sftp.
 /**
 @desPath: relative path in remote server.
- */
+*/
 func UploadFile(desPath string, client *sftp.Client, srcFile multipart.File, header *multipart.FileHeader) error {
 	var fullPath string
 	if wd, err := client.Getwd(); err == nil {

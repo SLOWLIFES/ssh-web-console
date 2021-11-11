@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/base64"
 	"encoding/json"
-	"github.com/genshen/ssh-web-console/src/models"
+	"github.com/SLOWLIFES/ssh-web-console/src/models"
 	"golang.org/x/crypto/ssh"
 	"io"
 	"nhooyr.io/websocket"

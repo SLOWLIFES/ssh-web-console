@@ -20,7 +20,7 @@ make sure you go version is not less than 1.11
 
 ### clone
 ```bash
-git clone --recurse-submodules https://github.com/genshen/ssh-web-console.git
+git clone --recurse-submodules https://github.com/SLOWLIFES/ssh-web-console.git
 cd ssh-web-console
 ```
 

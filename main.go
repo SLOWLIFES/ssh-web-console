@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/SLOWLIFES/ssh-web-console/src/routers"
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 )
 
 var confFilePath string

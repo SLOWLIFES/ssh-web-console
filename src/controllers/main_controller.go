@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/genshen/ssh-web-console/src/models"
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/models"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 	"golang.org/x/crypto/ssh"
 	"net/http"
 	"strconv"

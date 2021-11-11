@@ -3,8 +3,8 @@ package controllers
 import (
 	"context"
 	"fmt"
-	"github.com/genshen/ssh-web-console/src/models"
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/models"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 	"golang.org/x/crypto/ssh"
 	"io"
 	"log"
@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-//const SSH_EGG = `genshen<genshenchu@gmail.com> https://github.com/genshen/sshWebConsole"`
+//const SSH_EGG = `genshen<genshenchu@gmail.com> https://github.com/SLOWLIFES/sshWebConsole"`
 
 type SSHWebSocketHandle struct {
 	bufferFlushCycle int

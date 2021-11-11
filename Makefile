@@ -1,4 +1,4 @@
-PACKAGE=github.com/genshen/ssh-web-console
+PACKAGE=github.com/SLOWLIFES/ssh-web-console
 
 .PHONY: clean all
 

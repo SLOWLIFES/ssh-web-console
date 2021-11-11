@@ -1,16 +1,17 @@
 package files
 
 import (
-	"github.com/genshen/ssh-web-console/src/models"
-	"github.com/genshen/ssh-web-console/src/utils"
-	"github.com/oklog/ulid/v2"
-	"golang.org/x/crypto/ssh"
 	"log"
 	"math/rand"
 	"net/http"
+	"time"
+
+	"github.com/SLOWLIFES/ssh-web-console/src/models"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
+	"github.com/oklog/ulid"
+	"golang.org/x/crypto/ssh"
 	"nhooyr.io/websocket"
 	"nhooyr.io/websocket/wsjson"
-	"time"
 )
 
 type SftpEstablish struct{}

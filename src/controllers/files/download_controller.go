@@ -1,7 +1,7 @@
 package files
 
 import (
-	"github.com/genshen/ssh-web-console/src/utils"
+	"github.com/SLOWLIFES/ssh-web-console/src/utils"
 	"io"
 	"log"
 	"net/http"
